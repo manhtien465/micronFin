@@ -14,7 +14,8 @@ const Header = () => {
             height={49}
           />
         </Link>
-        <Link href={'/'} className="">
+        <Link href={'/'} className="bg-[#2D64F0] max-w-[136px] text-base leading-6 rounded px-5 py-2 ;
+">
           Contact
         </Link>
       </div>
