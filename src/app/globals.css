@@ -2,6 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'PlusJakartaSans-Bold';
+  src: url('/font/static/PlusJakartaSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans-BoldItalic';
+  src: url('/font/static/PlusJakartaSans-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans-Regular';
+  src: url('/font/static/PlusJakartaSans-BoldItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style:normal;
+}
+@font-face {
+  font-family: 'PlusJakartaSans-Light';
+  src: url('/font/static/PlusJakartaSans-Light.ttf') format('truetype');
+  font-weight:200;
+  font-style:normal;
+}
+@font-face {
+  font-family: 'PlusJakartaSans-Medium';
+  src: url('/font/static/PlusJakartaSans-Medium.ttf') format('truetype');
+  font-weight:200;
+  font-style:normal;
+}
+
+.font-bold {
+	font-family: 'PlusJakartaSans-Bold', sans-serif;
+}
+.font-bolditalic {
+	font-family: 'PlusJakartaSans-Bold', sans-serif;
+}
+.font-bolditalic {
+	font-family: 'PlusJakartaSans-Bold', sans-serif;
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,13 +58,7 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	font-family: 'PlusJakartaSans-Regular', sans-serif;
 }
 
 @layer utilities {
