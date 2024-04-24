@@ -6,7 +6,7 @@ interface ContairnerProps {
 
 const Contairner: React.FC<ContairnerProps> = ({ children }) => {
   return (
-    <section className="mx-auto max-w-7xl px-1">
+    <section className="mx-auto max-w-7xl px-4">
       {children}
     </section>
   );

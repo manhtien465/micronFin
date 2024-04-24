@@ -14,24 +14,25 @@ const Commercial = () => {
   ];
 
   return (
-    <div className="bg-[#f4f7fe]">
-        <Contairner>
-            <div className="text-center flex flex-col justify-center items-center">
-                <Title title="Commercial " titlecustom="Partners" />
-                <div className="grid grid-cols-3 gap-24 md:grid-cols-5 lg:grid-cols-5">
-                    {images.map((image, index) => (
-                    <div key={index}>
-                        <Image
-                        src={image.src}
-                        alt={image.alt}
-                        width={182}
-                        height={96}
-                        />
-                    </div>
-                    ))}
-                </div>
-            </div>
-        </Contairner>
+      <div className="text-center flex flex-col justify-center items-center mt-10 sm:mt-20">
+          <Title titlecustom="Commercial " title="Partners" align="items-center"/>
+          <div className="bg-[#f4f7fe] w-full py-8 px-20 mt-8 sm:mt-16">
+            <Contairner>
+            <div className=" w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 justify-center items-center gap-24 ">
+                      {images.map((image, index) => (
+                      <div key={index}>
+                          <Image
+                          src={image.src}
+                          alt={image.alt}
+                          layout="responsive"
+                          width={182}
+                          height={96}
+                          />
+                      </div>
+                      ))}
+                  </div>
+            </Contairner>
+        </div>
     </div>
 
 

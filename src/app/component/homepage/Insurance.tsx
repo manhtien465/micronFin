@@ -14,25 +14,28 @@ const Insurance = () => {
   ];
 
   return (
-    <div className="bg-[#fff7f2]">
-        <Contairner>
-            <div className="text-center flex flex-col justify-center items-center">
-                <Title title="Partners" titlecustom="Insurance" />
-                <div className="grid grid-cols-3 gap-24 md:grid-cols-5 lg:grid-cols-5">
-                    {images.map((image, index) => (
-                    <div key={index}>
-                        <Image
-                        src={image.src}
-                        alt={image.alt}
-                        width={182}
-                        height={96}
-                        />
+
+            <div className="text-center flex flex-col justify-center items-center mt-[68px] sm:mt-36">
+                <Title title="Partners" titlecustom="Insurance" align="items-center"/>
+        
+                <div className="bg-[#fff7f2] w-full py-10 px-20 mt-8 sm:mt-16">
+                  <Contairner>
+                    <div className=" w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 justify-center items-center gap-24 ">
+                        {images.map((image, index) => (
+                        <div key={index}>
+                            <Image
+                            src={image.src}
+                            alt={image.alt}
+                            layout="responsive"
+                            width={182}
+                            height={96}
+                            />
+                        </div>
+                        ))}
                     </div>
-                    ))}
+                  </Contairner>
                 </div>
             </div>
-        </Contairner>
-    </div>
 
 
   );
