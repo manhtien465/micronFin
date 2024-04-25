@@ -26,6 +26,7 @@ const Insurance = () => {
                             <Image
                             src={image.src}
                             alt={image.alt}
+                            // layout="fill"
                             layout="responsive"
                             width={182}
                             height={96}

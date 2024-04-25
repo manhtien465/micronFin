@@ -4,3 +4,4 @@ export async function getDataHomePage() {
   );
   return res.json();
 }
+

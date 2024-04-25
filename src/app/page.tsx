@@ -1,3 +1,4 @@
+
 import Header from './component/header';
 import Footer from './component/footer';
 import AboutUs from './component/homepage/AboutUs';
@@ -13,22 +14,38 @@ import { getDataHomePage } from '@/app/service/homepage';
 import Head from 'next/head';
 // import SeoHomePage from './component/seo/homepage';
 // import { DefaultSeo } from 'next-seo';
+
+async function getData() {
+  const res = await getDataHomePage
+
+  if (!res) {
+    throw new Error('Failed to fetch data')
+  }
+ 
+  return res()
+}
+
 export default async function Home() {
+  const data = await getData()
+  const dataHome = data.data.attributes
+
   return (
     <>
       <main>
         {/* <SeoHomePage></SeoHomePage> */}
         <Header></Header>
         <Banner />
-        <AboutUs />
-        {/* <OurService /> */}
+        <AboutUs data={dataHome}/>
+        <OurService data={dataHome} />
         <Insurance />
         <Commercial />
         <Experience/>
-        {/* <Products/> */}
+        <Products/>
         <OurTeam/>
         <Footer></Footer>
       </main>
     </>
   );
 }
+
+
