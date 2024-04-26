@@ -2,7 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import Title from '../Title';
 import Contairner from '@/app/contairner';
-const AboutUs = ( {data} ) => {
+
+interface AboutUsProps {
+  data: any;
+}
+
+const AboutUs: React.FC<AboutUsProps> = ({ data }) => {
   console.log(data)
   return (
     <Contairner>

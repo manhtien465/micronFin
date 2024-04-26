@@ -1,9 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import Contairner from '@/app/contairner';
+interface FooterProps {
+  data: any;
+}
 
-
-const Footer = () => {
+const Footer: React.FC<FooterProps> = ({ data }) => {
   return (
     <div className="">
         <div className='bg-[#F5F5F5]'>
@@ -22,39 +24,39 @@ const Footer = () => {
               <div className="flex flex-col justify-center gap-6 w-full sm:w-1/2">
                 <div className="flex">
                   <Image className="mr-4"
-                      src="/images/carbon_phone-filled.svg"
+                      src="/images/Footer_phone.svg"
                       alt="Experience"
                       width="24"
                       height="24"
                   />
-                  <span className="text-[#431805] text-lg font-semibold leading-[27px]">+84 239 423 223</span>
+                  <span className="text-[#431805] text-lg font-semibold leading-[27px]">{data.phone}</span>
                 </div>
                 <div className="flex">
                   <Image className="mr-4"
-                      src="/images/carbon_phone-filled.svg"
+                      src="/images/Footer_mail.svg"
                       alt="Experience"
                       width="24"
                       height="24"
                   />
-                  <span className="text-[#431805] text-lg font-semibold leading-[27px]">+84 239 423 223</span>
+                  <span className="text-[#431805] text-lg font-semibold leading-[27px]">{data.email}</span>
                 </div>
                 <div className="flex">
                   <Image className="mr-4"
-                      src="/images/carbon_phone-filled.svg"
+                      src="/images/Footer_location.svg"
                       alt="Experience"
                       width="24"
                       height="24"
                   />
-                  <span className="text-[#431805] text-lg font-semibold leading-[27px]">+84 239 423 223</span>
+                  <span className="text-[#431805] text-lg font-semibold leading-[27px]">{data.address}</span>
                 </div>
                 <div className="flex">
                   <Image className="mr-4"
-                      src="/images/carbon_phone-filled.svg"
+                      src="/images/Footer_web.svg"
                       alt="Experience"
                       width="24"
                       height="24"
                   />
-                  <span className="text-[#431805] text-lg font-semibold leading-[27px]">+84 239 423 223</span>
+                  <span className="text-[#431805] text-lg font-semibold leading-[27px]">{process.env.NEXT_PUBLIC_DOMAIN_URL}</span>
                 </div>
               </div>
             </div>

@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className="h-20">
       <Contairner>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center py-[14px]">
           <Link href={'/'}>
             <Image
               src="/images/logo_full.svg"
@@ -17,12 +17,18 @@ const Header = () => {
               height={49}
             />
           </Link>
-          <Link href={'/'} className="bg-[#2D64F0] max-w-[136px] text-base leading-6 rounded px-5 py-2 ;
-  ">
+          <Link href={'/'} className="hidden sm:flex bg-[#2D64F0] max-w-[136px] text-base leading-6 rounded px-5 py-2">
             Contact
           </Link>
+          <Image className="flex sm:hidden"
+              src="/images/Header_navbaricon.svg"
+              alt="navbav"
+              width={24}
+              height={24}
+          />
         </div>
       </Contairner>
+
     </div>
   );
 };

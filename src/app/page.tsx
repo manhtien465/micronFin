@@ -1,3 +1,4 @@
+// 'use client'
 
 import Header from './component/header';
 import Footer from './component/footer';
@@ -34,15 +35,15 @@ export default async function Home() {
       <main>
         {/* <SeoHomePage></SeoHomePage> */}
         <Header></Header>
-        <Banner />
+        <Banner data={dataHome}/>
         <AboutUs data={dataHome}/>
         <OurService data={dataHome} />
         <Insurance />
         <Commercial />
-        <Experience/>
-        <Products/>
-        <OurTeam/>
-        <Footer></Footer>
+        <Experience data={dataHome}/>
+        <Products data={dataHome}/>
+        <OurTeam data={dataHome}/>
+        <Footer data={dataHome}></Footer>
       </main>
     </>
   );
