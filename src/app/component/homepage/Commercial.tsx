@@ -1,10 +1,18 @@
-import React from 'react';
-import Title from '../Title';
+'use client'
+
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Image from 'next/image';
+
+import Title from '../Title';
 import Contairner from '@/app/contairner';
 
 const Commercial = () => {
-  // Mảng chứa thông tin của các hình ảnh
+  useEffect(() => {
+    AOS.init();
+  }, []);
+  
   const images = [
     { src: "/images/image 31.png", alt: "TNEX" },
     { src: "/images/image 32.png", alt: "FARM" },
@@ -14,7 +22,11 @@ const Commercial = () => {
   ];
 
   return (
-      <div className="text-center flex flex-col justify-center items-center mt-10 sm:mt-20">
+      <div 
+        className="text-center flex flex-col justify-center items-center mt-10 sm:mt-20"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
           <Title titlecustom="Commercial " title="Partners" align="items-center"/>
           <div className="bg-[#f4f7fe] w-full py-8 px-20 mt-8 sm:mt-16">
             <Contairner>

@@ -1,6 +1,8 @@
 'use client'
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Image from 'next/image';
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
@@ -15,6 +17,10 @@ interface ProductsProps {
 }
 
 const Products: React.FC<ProductsProps> = ({ data }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const settings = {
       dots: true,
       infinite: true,
@@ -43,7 +49,11 @@ const Products: React.FC<ProductsProps> = ({ data }) => {
   };
   return (
     <Contairner>
-        <div className=" flex flex-col mt-16 sm:mt-32">
+        <div 
+          className=" flex flex-col mt-16 sm:mt-32"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
             <Title title="Core Products" titlecustom="" align="items-center"/>
             <Slider {...settings} className="mt-8 sm:mt-20">
                     {data.products.map((product: { id: React.Key; icon:any, name: string; description: string }) =>

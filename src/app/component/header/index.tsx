@@ -10,7 +10,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-[14px]">
           <Link href={'/'}>
             <Image
-              src="/images/logo_full.svg"
+              src="/images/Header_logo.svg"
               alt="MicroFin"
               layout="responsive"
               width={167}

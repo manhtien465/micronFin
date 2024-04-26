@@ -1,11 +1,13 @@
 'use client'
 
-import React from 'react';
-import Image from 'next/image';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import Image from 'next/image';
 import Title from '../Title';
 import Contairner from '@/app/contairner';
 
@@ -14,6 +16,10 @@ interface OurServiceProps {
 }
 
 const OurService: React.FC<OurServiceProps> = ({ data }) => {
+    useEffect(() => {
+        AOS.init();
+      }, []);
+
     const settings = {
         dots: true,
         infinite: true,
@@ -43,7 +49,9 @@ const OurService: React.FC<OurServiceProps> = ({ data }) => {
 
     return (
         <Contairner>
-            <div className="text-center flex flex-col ">
+            <div className="text-center flex flex-col" 
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom">
                 <Title title="Our Services" titlecustom="" align="items-center"/>
                 <Slider {...settings} className="mt-10 sm:mt-14">
                     {data.services.map((service: { id: React.Key; icon:any; name: string; description: string }) =>

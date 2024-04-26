@@ -1,15 +1,28 @@
-import React from 'react';
+'use client'
+
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Image from 'next/image';
+
 import Contairner from '@/app/contairner';
 import Title from '../Title';
 interface OurTeamProps {
     data: any;
 }
   
-  const OurTeam: React.FC<OurTeamProps> = ({ data }) => {
+const OurTeam: React.FC<OurTeamProps> = ({ data }) => {
+    useEffect(() => {
+        AOS.init();
+        }, []);
+
   return (
     <Contairner>
-        <div className="text-center flex flex-col justify-center items-center mt-12 mb-28 sm:mt-[104px] sm:mb-[120px]">
+        <div 
+            className="text-center flex flex-col justify-center items-center mt-12 mb-28 sm:mt-[104px] sm:mb-[120px]"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+        >
             <Title title="Our Team" titlecustom="" align="items-center"/>
             <div className="flex w-full flex-col sm:flex-row gap-8 mt-16">
                 {data.teams.map((team: { id: React.Key; image:any, name: string; position: string }) =>

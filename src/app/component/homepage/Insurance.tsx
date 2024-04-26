@@ -1,10 +1,17 @@
-import React from 'react';
-import Title from '../Title';
+'use client'
+
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Image from 'next/image';
+
+import Title from '../Title';
 import Contairner from '@/app/contairner';
 
 const Insurance = () => {
-  // Mảng chứa thông tin của các hình ảnh
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const images = [
     { src: "/images/image 26.png", alt: "MSIG" },
     { src: "/images/image 27.png", alt: "igloo" },
@@ -15,7 +22,11 @@ const Insurance = () => {
 
   return (
 
-            <div className="text-center flex flex-col justify-center items-center mt-[68px] sm:mt-36">
+            <div 
+              className="text-center flex flex-col justify-center items-center mt-[68px] sm:mt-36"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+            >
                 <Title title="Partners" titlecustom="Insurance" align="items-center"/>
         
                 <div className="bg-[#fff7f2] w-full py-10 px-20 mt-8 sm:mt-16">
