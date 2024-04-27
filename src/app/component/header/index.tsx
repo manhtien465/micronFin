@@ -17,18 +17,21 @@ const Header = () => {
               height={49}
             />
           </Link>
-          <Link href={'/'} className="hidden sm:flex bg-[#2D64F0] max-w-[136px] text-base leading-6 rounded px-5 py-2">
+          <Link
+            href={'/'}
+            className="hidden sm:flex bg-[#2D64F0] max-w-[136px] text-base leading-6 rounded px-5 py-2 text-white"
+          >
             Contact
           </Link>
-          <Image className="flex sm:hidden"
-              src="/images/Header_navbaricon.svg"
-              alt="navbav"
-              width={24}
-              height={24}
+          <Image
+            className="flex sm:hidden"
+            src="/images/Header_navbaricon.svg"
+            alt="navbav"
+            width={24}
+            height={24}
           />
         </div>
       </Contairner>
-
     </div>
   );
 };
