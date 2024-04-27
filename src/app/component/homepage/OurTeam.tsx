@@ -14,7 +14,7 @@ interface OurTeamProps {
 const OurTeam: React.FC<OurTeamProps> = ({ data }) => {
     useEffect(() => {
         AOS.init();
-        }, []);
+    }, []);
 
   return (
     <Contairner>
@@ -26,7 +26,7 @@ const OurTeam: React.FC<OurTeamProps> = ({ data }) => {
             <Title title="Our Team" titlecustom="" align="items-center"/>
             <div className="flex w-full flex-col sm:flex-row gap-8 mt-16">
                 {data.teams.map((team: { id: React.Key; image:any, name: string; position: string }) =>
-                    <div className="flex flex-col w-full sm:w-1/3 rounded-lg border border-solid border-[#E5E5E5] ">
+                    <div key={team.id} className="flex flex-col w-full sm:w-1/3 rounded-lg border border-solid border-[#E5E5E5] ">
                         <Image
                             src={team.image.data.attributes.url}
                             alt={team.image.data.attributes.alternativeText}

@@ -17,6 +17,14 @@ const AboutUs: React.FC<AboutUsProps> = ({ data }) => {
     AOS.init();
   }, []);
   return (
+    <div className="">
+      {/* <Image
+      src={image.src}
+      alt={image.alt}
+      layout="responsive"
+      width={182}
+      height={96}
+      /> */}
     <Contairner>
       <div
         data-aos="fade-up"
@@ -34,6 +42,8 @@ const AboutUs: React.FC<AboutUsProps> = ({ data }) => {
         </div>
       </div>
     </Contairner>
+    </div>
+
   );
 };
 
