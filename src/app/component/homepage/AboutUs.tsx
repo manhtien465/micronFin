@@ -18,13 +18,13 @@ const AboutUs: React.FC<AboutUsProps> = ({ data }) => {
   }, []);
   return (
     <div className="relative">
-      <Image className=" hidden xl:flex absolute bottom-[-80px] left-0 w-[226px] h-[226px]"
+      <Image className="z-10 hidden xl:flex absolute bottom-[-80px] left-0 w-[226px] h-[226px]"
       src="/images/DotsViews.svg"
       alt="dots"
       width={226}
       height={226}
       />
-      <Image className=" flex xl:hidden absolute bottom-[-66px] left-[-68px] w-[144px] h-[104px] "
+      <Image className="z-10 flex xl:hidden absolute bottom-[-66px] left-[-68px] w-[144px] h-[104px] "
       src="/images/DotsViewsResponsive.svg"
       alt="dots"
       width={226}
