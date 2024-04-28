@@ -58,14 +58,14 @@ const Products: React.FC<ProductsProps> = ({ data }) => {
             <Slider {...settings} className="mt-8 sm:mt-20">
                     {data.products.map((product: { id: React.Key; icon:any, name: string; description: string }) =>
                       <div key={product.id} className="h-full mr-8 sm:!w-[calc(100%-32px)]">
-                        <div className=" flex flex-col items-start w-full py-8 px-6 sm:py-10 sm:px-8 text-[#404040] border border-[#F5F5F5] bg-[#FFFFFF] rounded-lg">
+                        <div className=" flex flex-col items-start justify-between w-full py-8 px-6 sm:py-10 sm:px-8 text-[#404040] border border-[#F5F5F5] bg-[#FFFFFF] rounded-lg">
                             <Image
                                 src={product.icon.data.attributes.url}
                                 alt={product.icon.data.attributes.alternativeText}
                                 width={80}
                                 height={80}
                             />
-                            <div className="text-[#2D64F0] text-xl sm:text-2xl font-semibold sm:font-medium my-6 sm:my-8">{product.name}</div>
+                            <div className="md:min-h-16 text-[#2D64F0] text-xl sm:text-2xl font-semibold sm:font-medium my-6 sm:my-8">{product.name}</div>
                             <div className="text-[#404040] text-sm leading-6 sm:text-base sm:leading-7">{product.description}</div>
                         </div>
                       </div>
