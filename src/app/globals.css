@@ -67,4 +67,9 @@ body {
   }
 }
 
+/* react-slick */
+.slick-next {
+  right: 0!important;
+}
+
 
