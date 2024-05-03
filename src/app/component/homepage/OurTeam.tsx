@@ -21,7 +21,7 @@ const OurTeam: React.FC<OurTeamProps> = ({ data }) => {
       <div
         className="text-center flex flex-col justify-center items-center mt-12 mb-28 sm:mt-[104px] sm:mb-[120px]"
         data-aos="fade-left"
-        data-aos-duration="3000"
+        data-aos-duration="2000"
         data-aos-anchor-placement="top-bottom"
       >
         <Title title="Our Team" titlecustom="" align="items-center" />

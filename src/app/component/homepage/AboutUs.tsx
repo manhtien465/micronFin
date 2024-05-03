@@ -35,7 +35,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ data }) => {
       <Contairner>
         <div
           data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos-duration="2000"
           data-aos-anchor-placement="top-bottom"
           className="text-center flex flex-col justify-center items-center mt-10 mb-16 sm:mt-[120px] sm:mb-[162px]"
         >

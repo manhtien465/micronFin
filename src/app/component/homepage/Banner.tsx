@@ -23,7 +23,7 @@ const Banner: React.FC<BannerProps> = ({ data }) => {
           <div
             className="w-full sm:w-1/2 h-full sm:mt-24"
             data-aos="fade-up"
-            data-aos-duration="3000"
+            data-aos-duration="2000"
             data-aos-anchor-placement="top-bottom"
           >
             <h2 className="font-medium text-3xl leading-[42px] sm:text-[40px] sm:leading-[60px] mb-4 sm:mb-6">

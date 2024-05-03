@@ -52,7 +52,7 @@ const OurService: React.FC<OurServiceProps> = ({ data }) => {
       <div
         className="text-center flex flex-col"
         data-aos="fade-up"
-        data-aos-duration="3000"
+        data-aos-duration="2000"
         data-aos-anchor-placement="top-bottom"
       >
         <Title title="Our Services" titlecustom="" align="items-center" />

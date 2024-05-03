@@ -24,7 +24,7 @@ const Insurance = () => {
     <div
       className="text-center flex flex-col justify-center items-center mt-[68px] sm:mt-36"
       data-aos="fade-down"
-      data-aos-duration="3000"
+      data-aos-duration="2000"
       data-aos-anchor-placement="top-bottom"
     >
       <Title title="Partners" titlecustom="Insurance" align="items-center" />

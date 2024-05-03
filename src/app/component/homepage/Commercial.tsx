@@ -25,7 +25,7 @@ const Commercial = () => {
     <div
       className="text-center flex flex-col justify-center items-center mt-10 sm:mt-20"
       data-aos="fade-up"
-      data-aos-duration="3000"
+      data-aos-duration="2000"
       data-aos-anchor-placement="top-bottom"
     >
       <Title titlecustom="Commercial " title="Partners" align="items-center" />

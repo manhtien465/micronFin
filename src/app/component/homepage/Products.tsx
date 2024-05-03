@@ -51,7 +51,7 @@ const Products: React.FC<ProductsProps> = ({ data }) => {
       <div
         className=" flex flex-col mt-16 sm:mt-32"
         data-aos="fade-down"
-        data-aos-duration="3000"
+        data-aos-duration="2000"
         data-aos-anchor-placement="top-bottom"
       >
         <Title title="Core Products" titlecustom="" align="items-center" />
