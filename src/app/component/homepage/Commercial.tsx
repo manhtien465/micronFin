@@ -23,6 +23,7 @@ const Commercial = () => {
 
   return (
       <div 
+        id="commercial"
         className="text-center flex flex-col justify-center items-center mt-10 sm:mt-20"
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"

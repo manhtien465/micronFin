@@ -49,7 +49,8 @@ const Products: React.FC<ProductsProps> = ({ data }) => {
   };
   return (
     <Contairner>
-        <div 
+        <div
+          id="products" 
           className=" flex flex-col mt-16 sm:mt-32"
           data-aos="fade-up"
           data-aos-anchor-placement="top-bottom"

@@ -48,11 +48,11 @@ const OurService: React.FC<OurServiceProps> = ({ data }) => {
     };
 
     return (
-        <Contairner>
-            <div className="text-center flex flex-col" 
+        <Contairner >
+            <div id="service"  className="text-center flex flex-col" 
                   data-aos="fade-up"
                   data-aos-anchor-placement="top-bottom">
-                <Title title="Our Services" titlecustom="" align="items-center"/>
+                <Title  title="Our Services" titlecustom="" align="items-center"/>
                 <Slider {...settings} className="mt-10 sm:mt-14">
                     {data.services.map((service: { id: React.Key; icon:any; name: string; description: string }) =>
                       <div key={service.id} className=" sm:!w-[calc(100%-32px)] ">

@@ -23,6 +23,7 @@ const Insurance = () => {
   return (
 
             <div 
+              id="insurance"
               className="text-center flex flex-col justify-center items-center mt-[68px] sm:mt-36"
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"

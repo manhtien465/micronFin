@@ -19,6 +19,7 @@ const OurTeam: React.FC<OurTeamProps> = ({ data }) => {
   return (
     <Contairner>
         <div 
+            id="team"
             className="text-center flex flex-col justify-center items-center mt-12 mb-28 sm:mt-[104px] sm:mb-[120px]"
             data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"

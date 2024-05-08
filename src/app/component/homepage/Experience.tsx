@@ -17,7 +17,7 @@ const Experience: React.FC<ExperienceProps> = ({ data }) => {
     AOS.init();
   }, []);
   return (
-    <div className="relative">
+    <div id="experience" className="relative">
       <Image className="z-10 hidden xl:flex absolute bottom-[-80px] right-0 w-[226px] h-[226px]"
       src="/images/DotsViews.svg"
       alt="dots"
