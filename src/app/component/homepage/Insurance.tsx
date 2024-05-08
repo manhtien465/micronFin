@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useEffect } from 'react';
 import AOS from 'aos';
@@ -13,14 +13,21 @@ const Insurance = () => {
     AOS.init();
   }, []);
   const images = [
-    { src: "/images/image 26.png", alt: "MSIG" },
-    { src: "/images/image 27.png", alt: "igloo" },
-    { src: "/images/image 28.png", alt: "BHS" },
-    { src: "/images/image 29.png", alt: "PVI" },
-    { src: "/images/image 30.png", alt: "OPES" }
+    { src: '/images/image 26.png', alt: 'MSIG' },
+    { src: '/images/image 27.png', alt: 'igloo' },
+    { src: '/images/image 28.png', alt: 'BHS' },
+    { src: '/images/image 29.png', alt: 'PVI' },
+    { src: '/images/image 30.png', alt: 'OPES' },
   ];
 
   return (
+    <div
+      className="text-center flex flex-col justify-center items-center mt-[68px] sm:mt-36"
+      data-aos="fade-down"
+      data-aos-duration="2000"
+      data-aos-anchor-placement="top-bottom"
+    >
+      <Title title="Partners" titlecustom="Insurance" align="items-center" />
 
             <div 
               id="insurance"
@@ -49,6 +56,7 @@ const Insurance = () => {
                   </Contairner>
                 </div>
             </div>
+          </div>
 
 
   );

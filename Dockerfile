@@ -1,23 +1,23 @@
 # Use official Node.js image as the base image
-FROM node:20.11.0-alpine
+FROM node:20.11.0
 
 # Set working directory in the container
 WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+COPY package*.json yarn.lock ./
 
 # Install dependencies
-RUN npm install
+RUN yarn
 
 # Copy the rest of the application code
 COPY . .
 
 # Build the Next.js app
-RUN npm run build
+RUN  yarn build
 
 # Expose port 3000
 EXPOSE 3000
 
 # Command to run the Next.js app
-CMD ["npm", "start"]
+CMD ["yarn", "start"]

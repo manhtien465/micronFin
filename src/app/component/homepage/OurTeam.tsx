@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useEffect } from 'react';
 import AOS from 'aos';
@@ -8,13 +8,13 @@ import Image from 'next/image';
 import Contairner from '@/app/contairner';
 import Title from '../Title';
 interface OurTeamProps {
-    data: any;
+  data: any;
 }
-  
+
 const OurTeam: React.FC<OurTeamProps> = ({ data }) => {
-    useEffect(() => {
-        AOS.init();
-    }, []);
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <Contairner>

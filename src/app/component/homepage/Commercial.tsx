@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useEffect } from 'react';
 import AOS from 'aos';
@@ -12,13 +12,13 @@ const Commercial = () => {
   useEffect(() => {
     AOS.init();
   }, []);
-  
+
   const images = [
-    { src: "/images/image 31.png", alt: "TNEX" },
-    { src: "/images/image 32.png", alt: "FARM" },
-    { src: "/images/image 33.png", alt: "FFCOM" },
-    { src: "/images/image 34.png", alt: "MOBIFONE" },
-    { src: "/images/image 35.png", alt: "AURORA" }
+    { src: '/images/image 31.png', alt: 'TNEX' },
+    { src: '/images/image 32.png', alt: 'FARM' },
+    { src: '/images/image 33.png', alt: 'FFCOM' },
+    { src: '/images/image 34.png', alt: 'MOBIFONE' },
+    { src: '/images/image 35.png', alt: 'AURORA' },
   ];
 
   return (
@@ -47,8 +47,6 @@ const Commercial = () => {
             </Contairner>
         </div>
     </div>
-
-
   );
 };
 
