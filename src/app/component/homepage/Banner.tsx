@@ -17,7 +17,7 @@ const Banner: React.FC<BannerProps> = ({ data }) => {
   }, []);
 
   return (
-    <div className="bg-[url(/images/Background.png)] bg-cover bg-center">
+    <div className="bg-[url(/images/Background.png)] bg-cover bg-center max-h-[527px]">
       <Contairner>
         <div className=" flex sm:flex-row flex-col justify-end pt-[72px] gap-10 sm:gap-3">
           <div
