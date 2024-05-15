@@ -47,32 +47,45 @@ const OurService: React.FC<OurServiceProps> = ({ data }) => {
     ],
   };
 
-    return (
-        <Contairner >
-            <div id="service"  className="text-center flex flex-col" 
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="top-bottom">
-                <Title  title="Our Services" titlecustom="" align="items-center"/>
-                <Slider {...settings} className="mt-10 sm:mt-14">
-                    {data.services.map((service: { id: React.Key; icon:any; name: string; description: string }) =>
-                      <div key={service.id} className=" sm:!w-[calc(100%-32px)] ">
-                        <div className="flex flex-col items-center justify-between w-full py-16 px-7 text-[#404040] border border-[#F5F5F5] bg-[#FFFFFF] rounded-lg">
-                            <Image
-                                src={service.icon.data.attributes.url}
-                                alt={service.icon.data.attributes.alternativeText}
-                                width={104}
-                                height={104}
-                            />
-                            <div className="md:min-h-[72px] text-2xl font-semibold leading-9 text-center mb-4 mt-8">{service.name}</div>
-                            <div className="leading-8 text-center">{service.description}</div>
-                        </div>
-                    </div>
-                        
-                    )}
-                </Slider>
-            </div>
-        </Contairner>
-    )
+  return (
+    <Contairner>
+      <div
+        id="service"
+        className="text-center flex flex-col"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
+        <Title title="Our Services" titlecustom="" align="items-center" />
+        <Slider {...settings} className="mt-10 sm:mt-14">
+          {data.services.map(
+            (service: {
+              id: React.Key;
+              icon: any;
+              name: string;
+              description: string;
+            }) => (
+              <div key={service.id} className=" sm:!w-[calc(100%-32px)] ">
+                <div className="flex flex-col items-center justify-between w-full py-16 px-7 text-[#404040] border border-[#F5F5F5] bg-[#FFFFFF] rounded-lg">
+                  <Image
+                    src={`${process.env.NEXT_PUBLIC_API_URL}${service.icon.data.attributes.url}`}
+                    alt={service.icon.data.attributes.alternativeText}
+                    width={104}
+                    height={104}
+                  />
+                  <div className="md:min-h-[72px] text-2xl font-semibold leading-9 text-center mb-4 mt-8">
+                    {service.name}
+                  </div>
+                  <div className="leading-8 text-center">
+                    {service.description}
+                  </div>
+                </div>
+              </div>
+            )
+          )}
+        </Slider>
+      </div>
+    </Contairner>
+  );
 };
 
 export default OurService;

@@ -48,31 +48,44 @@ const Products: React.FC<ProductsProps> = ({ data }) => {
   };
   return (
     <Contairner>
-        <div
-          id="products" 
-          className=" flex flex-col mt-16 sm:mt-32"
-          data-aos="fade-up"
-          data-aos-anchor-placement="top-bottom"
-        >
-            <Title title="Core Products" titlecustom="" align="items-center"/>
-            <Slider {...settings} className="mt-8 sm:mt-20">
-                    {data.products.map((product: { id: React.Key; icon:any, name: string; description: string }) =>
-                      <div key={product.id} className="h-full mr-8 sm:!w-[calc(100%-32px)]">
-                        <div className=" flex flex-col items-start justify-between w-full py-8 px-6 sm:py-10 sm:px-8 text-[#404040] border border-[#F5F5F5] bg-[#FFFFFF] rounded-lg">
-                            <Image
-                                src={product.icon.data.attributes.url}
-                                alt={product.icon.data.attributes.alternativeText}
-                                width={80}
-                                height={80}
-                            />
-                            <div className="md:min-h-16 text-[#2D64F0] text-xl sm:text-2xl font-semibold sm:font-medium my-6 sm:my-8">{product.name}</div>
-                            <div className="text-[#404040] text-sm leading-6 sm:text-base sm:leading-7">{product.description}</div>
-                        </div>
-                      </div>
-                        
-                    )}
-                </Slider>
-        </div>
+      <div
+        id="products"
+        className=" flex flex-col mt-16 sm:mt-32"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
+        <Title title="Core Products" titlecustom="" align="items-center" />
+        <Slider {...settings} className="mt-8 sm:mt-20">
+          {data.products.map(
+            (product: {
+              id: React.Key;
+              icon: any;
+              name: string;
+              description: string;
+            }) => (
+              <div
+                key={product.id}
+                className="h-full mr-8 sm:!w-[calc(100%-32px)]"
+              >
+                <div className=" flex flex-col items-start justify-between w-full py-8 px-6 sm:py-10 sm:px-8 text-[#404040] border border-[#F5F5F5] bg-[#FFFFFF] rounded-lg">
+                  <Image
+                    src={`${process.env.NEXT_PUBLIC_API_URL}${product.icon.data.attributes.url}`}
+                    alt={product.icon.data.attributes.alternativeText}
+                    width={80}
+                    height={80}
+                  />
+                  <div className="md:min-h-16 text-[#2D64F0] text-xl sm:text-2xl font-semibold sm:font-medium my-6 sm:my-8">
+                    {product.name}
+                  </div>
+                  <div className="text-[#404040] text-sm leading-6 sm:text-base sm:leading-7">
+                    {product.description}
+                  </div>
+                </div>
+              </div>
+            )
+          )}
+        </Slider>
+      </div>
     </Contairner>
   );
 };

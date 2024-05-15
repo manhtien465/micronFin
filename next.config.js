@@ -2,6 +2,6 @@
 
 module.exports = {
   images: {
-    domains: ['https://api.microfin.vn'],
+    domains: ['api.microfin.vn'],
   },
 };

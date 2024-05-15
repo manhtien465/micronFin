@@ -18,11 +18,12 @@ const Experience: React.FC<ExperienceProps> = ({ data }) => {
   }, []);
   return (
     <div id="experience" className="relative">
-      <Image className="z-10 hidden xl:flex absolute bottom-[-80px] right-0 w-[226px] h-[226px]"
-      src="/images/DotsViews.svg"
-      alt="dots"
-      width={226}
-      height={226}
+      <Image
+        className="z-10 hidden xl:flex absolute bottom-[-80px] right-0 w-[226px] h-[226px]"
+        src="/images/DotsViews.svg"
+        alt="dots"
+        width={226}
+        height={226}
       />
       <Image
         className="z-10 flex xl:hidden absolute bottom-[-50px] right-0 w-[144px] h-[104px] "
@@ -35,7 +36,7 @@ const Experience: React.FC<ExperienceProps> = ({ data }) => {
         <div className="flex flex-col sm:flex-row  justify-center items-center mt-12 sm:mt-36">
           <div className="w-full sm:w-1/2 relative">
             <Image
-              src={data.experience.image.data.attributes.formats.thumbnail.url}
+              src={`${process.env.NEXT_PUBLIC_API_URL}${data.experience.image.data.attributes.formats.thumbnail.url}`}
               alt={data.experience.image.data.attributes.alternativeText}
               layout="responsive"
               width="628"

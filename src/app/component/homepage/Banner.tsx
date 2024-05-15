@@ -35,7 +35,7 @@ const Banner: React.FC<BannerProps> = ({ data }) => {
           </div>
           <Image
             className="w-full sm:!w-1/2"
-            src={data.hero.image.data.attributes.url}
+            src={`${process.env.NEXT_PUBLIC_API_URL}${data.hero.image.data.attributes.url}`}
             alt={data.hero.image.data.attributes.alternativeText}
             layout="responsive"
             width={123}
