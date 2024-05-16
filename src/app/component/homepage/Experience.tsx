@@ -14,7 +14,12 @@ interface ExperienceProps {
 
 const Experience: React.FC<ExperienceProps> = ({ data }) => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 2000, 
+      once: true, 
+      anchorPlacement: 'top-bottom' 
+    });
+    AOS.refresh();
   }, []);
   return (
     <div id="experience" className="relative">
@@ -48,8 +53,6 @@ const Experience: React.FC<ExperienceProps> = ({ data }) => {
           </div>
           <div
             data-aos="fade-up"
-            data-aos-duration="2000"
-            data-aos-anchor-placement="top-bottom"
             className="relative w-full sm:w-1/2 flex flex-col items-start rounded-r-lg bg-[#fff6f3] pt-8 px-5 pb-11 sm:pt-16 sm:pr-[67px] sm:pl-[76px] sm:pb-[86px]"
           >
             <Title titlecustom="" title="Experience" align="items-start" />

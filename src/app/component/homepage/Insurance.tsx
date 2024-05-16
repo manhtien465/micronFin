@@ -10,7 +10,12 @@ import Contairner from '@/app/contairner';
 
 const Insurance = () => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 2000, 
+      once: true, 
+      anchorPlacement: 'top-bottom' 
+    });
+    AOS.refresh();
   }, []);
   const images = [
     { src: '/images/image 26.png', alt: 'MSIG' },
@@ -26,7 +31,6 @@ const Insurance = () => {
               id="insurance"
               className="text-center flex flex-col justify-center items-center mt-[68px] sm:mt-36"
               data-aos="fade-up"
-              data-aos-anchor-placement="top-bottom"
             >
                 <Title title="Partners" titlecustom="Insurance" align="items-center"/>
         

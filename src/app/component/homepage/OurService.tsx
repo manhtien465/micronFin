@@ -17,7 +17,12 @@ interface OurServiceProps {
 
 const OurService: React.FC<OurServiceProps> = ({ data }) => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 2000, 
+      once: true, 
+      anchorPlacement: 'top-bottom' 
+    });
+    AOS.refresh();
   }, []);
 
   const settings = {
@@ -53,7 +58,6 @@ const OurService: React.FC<OurServiceProps> = ({ data }) => {
         id="service"
         className="text-center flex flex-col"
         data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
       >
         <Title title="Our Services" titlecustom="" align="items-center" />
         <Slider {...settings} className="mt-10 sm:mt-14">

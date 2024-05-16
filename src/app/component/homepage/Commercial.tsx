@@ -10,7 +10,12 @@ import Contairner from '@/app/contairner';
 
 const Commercial = () => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 2000, 
+      once: true, 
+      anchorPlacement: 'top-bottom' 
+    });
+    AOS.refresh();
   }, []);
 
   const images = [
@@ -26,7 +31,6 @@ const Commercial = () => {
         id="commercial"
         className="text-center flex flex-col justify-center items-center mt-10 sm:mt-20"
         data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
       >
           <Title titlecustom="Commercial " title="Partners" align="items-center"/>
           <div className="bg-[#f4f7fe] w-full py-8 px-20 mt-8 sm:mt-16">

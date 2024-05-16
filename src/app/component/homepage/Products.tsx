@@ -17,7 +17,12 @@ interface ProductsProps {
 
 const Products: React.FC<ProductsProps> = ({ data }) => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 2000, 
+      once: true, 
+      anchorPlacement: 'top-bottom' 
+    });
+    AOS.refresh();
   }, []);
 
   const settings = {
@@ -52,7 +57,6 @@ const Products: React.FC<ProductsProps> = ({ data }) => {
         id="products"
         className=" flex flex-col mt-16 sm:mt-32"
         data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
       >
         <Title title="Core Products" titlecustom="" align="items-center" />
         <Slider {...settings} className="mt-8 sm:mt-20">

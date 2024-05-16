@@ -14,7 +14,12 @@ interface AboutUsProps {
 
 const AboutUs: React.FC<AboutUsProps> = ({ data }) => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 2000, 
+      once: true, 
+      anchorPlacement: 'top-bottom' 
+    });
+    AOS.refresh();
   }, []);
   return (
     <div id="about" className="relative">
@@ -34,8 +39,6 @@ const AboutUs: React.FC<AboutUsProps> = ({ data }) => {
       <Contairner>
         <div
           data-aos="fade-up"
-          data-aos-duration="2000"
-          data-aos-anchor-placement="top-bottom"
           className="text-center flex flex-col justify-center items-center mt-10 mb-16 sm:mt-[120px] sm:mb-[162px]"
         >
           <Title title="About Us" titlecustom="" align="items-center" />

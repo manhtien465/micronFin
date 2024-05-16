@@ -13,7 +13,12 @@ interface OurTeamProps {
 
 const OurTeam: React.FC<OurTeamProps> = ({ data }) => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 2000, 
+      once: true, 
+      anchorPlacement: 'top-bottom' 
+    });
+    AOS.refresh();
   }, []);
 
   return (
@@ -22,7 +27,6 @@ const OurTeam: React.FC<OurTeamProps> = ({ data }) => {
         id="team"
         className="text-center flex flex-col justify-center items-center mt-12 mb-28 sm:mt-[104px] sm:mb-[120px]"
         data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
       >
         <Title title="Our Team" titlecustom="" align="items-center" />
         <div className="flex w-full flex-col sm:flex-row gap-8 mt-16">

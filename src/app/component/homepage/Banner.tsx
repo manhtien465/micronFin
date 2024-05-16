@@ -13,7 +13,12 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ data }) => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 2000, 
+      once: true, 
+      anchorPlacement: 'top-bottom' 
+    });
+    AOS.refresh();
   }, []);
 
   return (
@@ -23,8 +28,6 @@ const Banner: React.FC<BannerProps> = ({ data }) => {
           <div
             className="w-full sm:w-1/2 h-full sm:mt-24"
             data-aos="fade-up"
-            data-aos-duration="2000"
-            data-aos-anchor-placement="top-bottom"
           >
             <h2 className="font-medium text-3xl leading-[42px] sm:text-[40px] sm:leading-[60px] mb-4 sm:mb-6">
               {data.hero.title}
