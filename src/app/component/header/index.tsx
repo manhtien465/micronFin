@@ -1,11 +1,11 @@
-'use client'
+'use client';
 
-import { MdOutlineClose } from "react-icons/md";
-import { HiOutlineMenu } from "react-icons/hi";
-import Contairner from "@/app/contairner";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useState } from "react";
+import { MdOutlineClose } from 'react-icons/md';
+import { HiOutlineMenu } from 'react-icons/hi';
+import Contairner from '@/app/contairner';
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useState } from 'react';
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -15,20 +15,20 @@ const Header = () => {
   };
 
   const menuItems = [
-    { label: "About Us", href: "/#about" },
-    { label: "Service", href: "/#service" },
-    { label: "Insurance", href: "/#insurance" },
-    { label: "Commercial", href: "/#commercial" },
-    { label: "Experience", href: "/#experience" },
-    { label: "Products", href: "/#products" },
-    { label: "Team", href: "/#team" },
+    { label: 'About Us', href: '/#about' },
+    { label: 'Service', href: '/#service' },
+    { label: 'Insurance', href: '/#insurance' },
+    { label: 'Commercial', href: '/#commercial' },
+    { label: 'Experience', href: '/#experience' },
+    { label: 'Products', href: '/#products' },
+    { label: 'Team', href: '/#team' },
   ];
 
   return (
     <div className="h-20">
       <Contairner>
         <div className="flex justify-between items-center py-[14px]">
-          <Link href={"/"}>
+          <Link href={'/'}>
             <Image
               src="/images/Header_logo.svg"
               alt="MicroFin"
@@ -56,13 +56,13 @@ const Header = () => {
           <ul className="flex lg:hidden lg:gap-10 ml-auto text-16 font-semibold">
             {openMenu ? (
               <MdOutlineClose
-                size={"24px"}
+                size={'24px'}
                 className="cursor-pointer"
                 onClick={handleMenu}
               />
             ) : (
               <HiOutlineMenu
-                size={"24px"}
+                size={'24px'}
                 className="cursor-pointer"
                 onClick={handleMenu}
               />
@@ -88,7 +88,7 @@ const Header = () => {
 
           <div className="hidden lg:flex">
             <Link
-              href={"/"}
+              href={'/'}
               className="block bg-[#2D64F0] max-w-[136px] text-base leading-6 rounded px-5 py-2 text-white"
             >
               Contact
